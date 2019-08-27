@@ -1,0 +1,11 @@
+CHIP Mux8Way16 {
+    IN ip1[16], ip2[16], ip3[16], ip4[16],
+       ip5[16], ip6[16], ip7[16], ip8[16],
+       s[3];
+    OUT out[16];
+
+    PARTS:
+    Mux4Way16(ip1=ip1, ip2=ip2, ip3=ip3, ip4=ip4, s[0]=s[0], s[1]=s[1], out=c1);
+    Mux4Way16(ip1=ip5, ip2=ip6, ip3=ip7, ip4=ip8, s[0]=s[0], s[1]=s[1], out=c2);
+    Mux16(ip1=c1, ip2=c2, s=s[2], out=out);
+}

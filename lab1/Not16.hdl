@@ -1,0 +1,8 @@
+CHIP Not16 {
+    IN ip1[16];
+    OUT out[16];
+
+    PARTS:
+    Not8(ip1[0..7]=ip1[0..7], out[0..7]=out[0..7]);
+    Not8(ip1[0..7]=ip1[8..15], out[0..7]=out[8..15]);
+}

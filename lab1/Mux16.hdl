@@ -1,0 +1,22 @@
+CHIP Mux16 {
+    IN ip1[16], ip2[16], s;
+    OUT out[16];
+
+    PARTS:
+    Mux(ip1=ip1[0], ip2=ip2[0], s=s, out=out[0]);
+    Mux(ip1=ip1[1], ip2=ip2[1], s=s, out=out[1]);
+    Mux(ip1=ip1[2], ip2=ip2[2], s=s, out=out[2]);
+    Mux(ip1=ip1[3], ip2=ip2[3], s=s, out=out[3]);
+    Mux(ip1=ip1[4], ip2=ip2[4], s=s, out=out[4]);
+    Mux(ip1=ip1[5], ip2=ip2[5], s=s, out=out[5]);
+    Mux(ip1=ip1[6], ip2=ip2[6], s=s, out=out[6]);
+    Mux(ip1=ip1[7], ip2=ip2[7], s=s, out=out[7]);
+    Mux(ip1=ip1[8], ip2=ip2[8], s=s, out=out[8]);
+    Mux(ip1=ip1[9], ip2=ip2[9], s=s, out=out[9]);
+    Mux(ip1=ip1[10], ip2=ip2[10], s=s, out=out[10]);
+    Mux(ip1=ip1[11], ip2=ip2[11], s=s, out=out[11]);
+    Mux(ip1=ip1[12], ip2=ip2[12], s=s, out=out[12]);
+    Mux(ip1=ip1[13], ip2=ip2[13], s=s, out=out[13]);
+    Mux(ip1=ip1[14], ip2=ip2[14], s=s, out=out[14]);
+    Mux(ip1=ip1[15], ip2=ip2[15], s=s, out=out[15]);
+}
