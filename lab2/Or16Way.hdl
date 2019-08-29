@@ -1,0 +1,21 @@
+CHIP Or16Way {
+    IN ip1[16];
+    OUT out;
+
+    PARTS:
+    Or(ip1=ip1[0],ip2=ip1[1],out=a);
+	Or(ip1=a,ip2=ip1[2],out=b);
+	Or(ip1=b,ip2=ip1[3],out=c);
+	Or(ip1=c,ip2=ip1[4],out=d);
+	Or(ip1=d,ip2=ip1[5],out=e);
+	Or(ip1=e,ip2=ip1[6],out=f);
+	Or(ip1=f,ip2=ip1[7],out=g);
+	Or(ip1=g,ip2=ip1[8],out=h);
+	Or(ip1=h,ip2=ip1[9],out=i);
+	Or(ip1=i,ip2=ip1[10],out=j);
+	Or(ip1=j,ip2=ip1[11],out=k);
+	Or(ip1=k,ip2=ip1[12],out=l);
+	Or(ip1=l,ip2=ip1[13],out=m);
+	Or(ip1=m,ip2=ip1[14],out=n);
+	Or(ip1=n,ip2=ip1[15],out=out);
+}

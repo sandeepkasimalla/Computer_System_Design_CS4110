@@ -1,0 +1,13 @@
+CHIP FullAdder {
+    IN ip1, ip2, ip3;  
+    OUT sum, carry;  
+
+    PARTS:
+    Xor(ip1=ip1, ip2=ip2, out=con1);
+    Xor(ip1=con1, ip2=ip3, out=sum);
+
+    And(ip1=ip1, ip2=ip2, out=con2);
+    And(ip1=con1, ip2=ip3, out=con3);
+
+    Or(ip1=con2, ip2=con3, out=carry);
+}

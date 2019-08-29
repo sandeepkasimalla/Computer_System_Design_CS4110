@@ -1,0 +1,14 @@
+CHIP Not8 {
+    IN ip1[8];
+    OUT out[8];
+
+    PARTS:
+    Not(ip1=ip1[0], out=out[0]);
+    Not(ip1=ip1[1], out=out[1]);
+    Not(ip1=ip1[2], out=out[2]);
+    Not(ip1=ip1[3], out=out[3]);
+    Not(ip1=ip1[4], out=out[4]);
+    Not(ip1=ip1[5], out=out[5]);
+    Not(ip1=ip1[6], out=out[6]);
+    Not(ip1=ip1[7], out=out[7]);
+}

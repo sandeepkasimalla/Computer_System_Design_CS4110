@@ -1,0 +1,7 @@
+CHIP ShiftLeft {
+    IN ip1[16];
+    OUT out[16];
+
+    PARTS:
+    Add16(ip1=ip1, ip2=ip1, out=out);
+}

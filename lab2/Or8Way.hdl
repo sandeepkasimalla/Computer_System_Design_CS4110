@@ -1,0 +1,13 @@
+CHIP Or8Way {
+    IN ip1[8];
+    OUT out;
+
+    PARTS:
+    Or(ip1=ip1[0], ip2=ip1[1], out=con1);
+    Or(ip1=ip1[2], ip2=ip1[3], out=con2);
+    Or(ip1=ip1[4], ip2=ip1[5], out=con3);
+    Or(ip1=ip1[6], ip2=ip1[7], out=con4);
+    Or(ip1=con1, ip2=con2, out=con5);
+    Or(ip1=con3, ip2=con4, out=con6);
+    Or(ip1=con5, ip2=con6, out=out);
+}

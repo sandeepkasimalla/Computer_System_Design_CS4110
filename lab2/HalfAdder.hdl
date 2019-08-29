@@ -1,0 +1,8 @@
+CHIP HalfAdder {
+    IN ip1, ip2;   
+    OUT sum,carry; 
+
+    PARTS:
+    Xor(ip1=ip1, ip2=ip2, out=sum);
+    And(ip1=ip1, ip2=ip2, out=carry);
+}

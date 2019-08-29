@@ -1,0 +1,22 @@
+CHIP Add16 {
+   IN ip1[16], ip2[16];
+   OUT out[16];
+
+   PARTS:
+   HalfAdder(ip1=ip1[0], ip2=ip2[0], sum=out[0], carry=con1);
+   FullAdder(ip1=ip1[1], ip2=ip2[1], ip3=con1, sum=out[1], carry=con2);
+   FullAdder(ip1=ip1[2], ip2=ip2[2], ip3=con2, sum=out[2], carry=con3);
+   FullAdder(ip1=ip1[3], ip2=ip2[3], ip3=con3, sum=out[3], carry=con4);
+   FullAdder(ip1=ip1[4], ip2=ip2[4], ip3=con4, sum=out[4], carry=con5);
+   FullAdder(ip1=ip1[5], ip2=ip2[5], ip3=con5, sum=out[5], carry=con6);
+   FullAdder(ip1=ip1[6], ip2=ip2[6], ip3=con6, sum=out[6], carry=con7);
+   FullAdder(ip1=ip1[7], ip2=ip2[7], ip3=con7, sum=out[7], carry=con8);
+   FullAdder(ip1=ip1[8], ip2=ip2[8], ip3=con8, sum=out[8], carry=con9);
+   FullAdder(ip1=ip1[9], ip2=ip2[9], ip3=con9, sum=out[9], carry=con10);
+   FullAdder(ip1=ip1[10], ip2=ip2[10], ip3=con10, sum=out[10], carry=con11);
+   FullAdder(ip1=ip1[11], ip2=ip2[11], ip3=con11, sum=out[11], carry=con12);
+   FullAdder(ip1=ip1[12], ip2=ip2[12], ip3=con12, sum=out[12], carry=con13);
+   FullAdder(ip1=ip1[13], ip2=ip2[13], ip3=con13, sum=out[13], carry=con14);
+   FullAdder(ip1=ip1[14], ip2=ip2[14], ip3=con14, sum=out[14], carry=con15);
+   FullAdder(ip1=ip1[15], ip2=ip2[15], ip3=con15, sum=out[15], carry=con16);
+}
