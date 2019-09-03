@@ -1,0 +1,15 @@
+CHIP Inc8 {
+   IN ip1[8];
+   OUT out[8];
+
+   PARTS:
+    HalfAdder(ip1=ip1[0], ip2=true, sum=out[0], carry=con1);
+    HalfAdder(ip1=ip1[1], ip2=con1, sum=out[1], carry=con2);
+    HalfAdder(ip1=ip1[2], ip2=con2, sum=out[2], carry=con3);
+    HalfAdder(ip1=ip1[3], ip2=con3, sum=out[3], carry=con4);
+    HalfAdder(ip1=ip1[4], ip2=con4, sum=out[4], carry=con5);
+    HalfAdder(ip1=ip1[5], ip2=con5, sum=out[5], carry=con6);
+    HalfAdder(ip1=ip1[6], ip2=con6, sum=out[6], carry=con7);
+    HalfAdder(ip1=ip1[7], ip2=con7, sum=out[7], carry=con8);
+
+}

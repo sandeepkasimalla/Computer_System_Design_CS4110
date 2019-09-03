@@ -1,0 +1,9 @@
+CHIP And {
+    IN ip1,ip2;
+    OUT out;
+
+    PARTS:
+    // Put your code here:
+    Nand(a=ip1, b=ip2, out=con1);
+    Nand(a=con1, b=con1, out=out);
+}
