@@ -1,0 +1,11 @@
+CHIP DMux4Way {
+
+    IN ip1, s[2];
+
+    OUT out1, out2, out3, out4;
+
+    PARTS:
+    DMux(ip1=ip1, s=s[1], out1=con1, out2=con2);
+    DMux(ip1=con1, s=s[0], out1=out1, out2=out2);
+    DMux(ip1=con2, s=s[0], out1=out3, out2=out4);
+}
