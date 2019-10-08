@@ -1,0 +1,29 @@
+// This file is part of the materials accompanying the book 
+// "The Elements of Computing Systems" by Nisan and Schocken, 
+// MIT Press. Book site: www.idc.ac.il/tecs
+// File name: projects/03/b/RAM512.hdl
+
+/**
+ * Memory of 512 registers, each 16 bit-wide. Out holds the value
+ * stored at the memory location specified by address. If load==1, then 
+ * the ip1 value is loaded into the memory location specified by address 
+ * (the loaded value will be emitted to out from the next time step onward).
+ */
+
+CHIP RAM512 {
+    IN ip1[16], load, address[9];
+    OUT out[16];
+
+    PARTS:
+    // Put your code here:
+    DMux8Way(ip1=load, s=address[6..8], out1=l0, out2=l1, out3=l2, out4=l3, out5=l4, out6=l5, out7=l6, out8=l7);
+	RAM64(ip1=ip1, load=l0, address=address[0..5], out=o0);
+	RAM64(ip1=ip1, load=l1, address=address[0..5], out=o1);
+	RAM64(ip1=ip1, load=l2, address=address[0..5], out=o2);
+	RAM64(ip1=ip1, load=l3, address=address[0..5], out=o3);
+	RAM64(ip1=ip1, load=l4, address=address[0..5], out=o4);
+	RAM64(ip1=ip1, load=l5, address=address[0..5], out=o5);
+	RAM64(ip1=ip1, load=l6, address=address[0..5], out=o6);
+	RAM64(ip1=ip1, load=l7, address=address[0..5], out=o7);
+	Mux8Way16(ip1=o0, ip2=o1, ip3=o2, ip4=o3, ip5=o4, ip6=o5, ip7=o6, ip8=o7, s=address[6..8], out=out);	
+}

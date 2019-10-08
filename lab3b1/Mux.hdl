@@ -1,0 +1,10 @@
+CHIP Mux {
+    IN ip1, ip2, s;
+    OUT out;
+
+    PARTS:
+    Not(ip1=s, out=ns);
+    And(ip1=s, ip2=ip2, out=con1);
+    And(ip1=ns, ip2=ip1, out=con2);
+    Or(ip1=con1, ip2=con2, out=out);
+}
