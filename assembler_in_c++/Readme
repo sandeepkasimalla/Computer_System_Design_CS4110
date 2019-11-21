@@ -1,0 +1,15 @@
+compile:
+
+g++ assembler.cpp
+./a.out sample.asm
+
+
+output:
+output will be in sample.hack in current folder
+
+
+It will support for
+
+1.comments
+2.white spaces (\n, \t, " ")
+3.Lower case labels (jmp, jle, etc.,)
